@@ -41,7 +41,7 @@ class Entry extends OperatorResource
     /**
      * Retrieves the catalog entry's URL according to a specific region and URL type.
      */
-    public function getEndpointUrl(string $region, string $urlType): string
+    public function getEndpointUrl(string $region, string $urlType): string|bool|null
     {
         foreach ($this->endpoints as $endpoint) {
             if ($endpoint->supportsRegion($region) && $endpoint->supportsUrlType($urlType)) {

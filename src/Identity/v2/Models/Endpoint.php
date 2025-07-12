@@ -63,9 +63,9 @@ class Endpoint extends OperatorResource
      *
      * @param string $urlType Either "internalURL", "publicURL" or "adminURL" (case insensitive)
      *
-     * @return bool|string
+     * @return bool|string|null
      */
-    public function getUrl(string $urlType): string
+    public function getUrl(string $urlType): string|bool|null
     {
         $url = false;
 
